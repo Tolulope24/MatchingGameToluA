@@ -10,17 +10,20 @@ using System.Windows.Forms;
 
 namespace MatchingGameToluA
 {
-    public partial class MatchingGameForm : Form
+    public partial class frmMatchingGame : Form
     {
-        public MatchingGameForm()
+        public frmMatchingGame()
         {
             InitializeComponent();
+            // Hide Layout Panel
             tableLayoutPanel1.Hide();
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            
+            // Show Layout Panel 
+            tableLayoutPanel1.Show();
+
         }
     }
 }
