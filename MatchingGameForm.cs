@@ -18,11 +18,11 @@ namespace MatchingGameToluA
             // Hide Layout Panel
             tableLayoutPanel1.Hide();
             AssignPicsToSquares();
-            
         }
+        Label firstClicked = null;
+        Label secondClicked = null;
         //  Create a random obect Generator
         Random randomObject = new Random();
-        int timer;
         // Create a list of random objects
         List<string> Objects = new List<string>()
         {
@@ -48,25 +48,81 @@ namespace MatchingGameToluA
         {
             // Show Layout Panel 
             tableLayoutPanel1.Show();
+            // Hide Start Button 
             btnStart.Hide();
             lblInstruction.Hide();
             picMochi.Hide();
             lblIntro.Hide();
-
-            // add Pictures to list
-
-            
-
         }
 
-        private void Timer (object sender, EventArgs e)
+        private void label_Click(object sender, EventArgs e)
         {
-            if (timer > 0 )
+            if (timer1.Enabled == true)
+                return;
+            Label clickedLabel = sender as Label;
+
+            if (clickedLabel != null)
             {
 
+                if (clickedLabel.ForeColor == Color.Red)
+                    return;
+
+                if (firstClicked == null)
+                {
+                    firstClicked = clickedLabel;
+                    firstClicked.ForeColor = Color.Red;
+
+                    return;
+                }
+                secondClicked = clickedLabel;
+                secondClicked.ForeColor = Color.Red;
+
+                CheckWinner();
+
+                if (firstClicked.Text == secondClicked.Text)
+                {
+                    firstClicked = null;
+                    secondClicked = null;
+                    return;
+                }
+
+                
+
+                timer1.Start();
             }
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Stop();
+
+            firstClicked.ForeColor = firstClicked.BackColor;
+            secondClicked.ForeColor = secondClicked.BackColor;
+
+            firstClicked = null;
+            secondClicked = null;
+
+        }
+
+        private void CheckWinner()
+        {
+            foreach (Control control in tableLayoutPanel1.Controls)
+            {
+                Label picLabel = control as Label;
+                if ( picLabel != null)
+                {
+                    if (picLabel.ForeColor == picLabel.BackColor)
+                        return;
+                }
+            }
+            MessageBox.Show("You matched all the pictures", " You are the Winner");
+                Close();
+        }
+    
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
         private void frmMatchingGame_Load(object sender, EventArgs e)
         {
 
