@@ -17,6 +17,7 @@ namespace MatchingGameToluA
             InitializeComponent();
             // Hide Layout Panel
             tableLayoutPanel1.Hide();
+            AssignPicsToSquares();
             
         }
         //  Create a random obect Generator
@@ -28,7 +29,21 @@ namespace MatchingGameToluA
             "a", "a", "b", "b", "<", "<", "Y", "Y",
             "!", "!", "h", "h", "%", "%", "$", "$"
         };
-        
+        // assign images to a random square
+        private void AssignPicsToSquares()
+        {
+            foreach (Control control in tableLayoutPanel1.Controls)
+            {
+                Label picLabel = control as Label;
+                if (picLabel != null)
+                {
+                    int randomNumber = randomObject.Next(Objects.Count);
+                    picLabel.Text = Objects[randomNumber];
+                    picLabel.ForeColor = picLabel.BackColor;
+                    Objects.RemoveAt(randomNumber);
+                }
+            }
+        }
         private void btnStart_Click(object sender, EventArgs e)
         {
             // Show Layout Panel 
@@ -38,7 +53,8 @@ namespace MatchingGameToluA
             picMochi.Hide();
             lblIntro.Hide();
 
-            // add Objects to list
+            // add Pictures to list
+
             
 
         }
