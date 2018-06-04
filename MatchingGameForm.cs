@@ -17,29 +17,41 @@ namespace MatchingGameToluA
             InitializeComponent();
             // Hide Layout Panel
             tableLayoutPanel1.Hide();
+            // Call assign pics to squares function
             AssignPicsToSquares();
         }
+        // Add timer as integer
+        int Time;
+        // Set the first two clicked squares to nothing
         Label firstClicked = null;
         Label secondClicked = null;
         //  Create a random obect Generator
         Random randomObject = new Random();
-        // Create a list of random objects
+        // Create a list of random objects (using the webdings font creates the pics)
         List<string> Objects = new List<string>()
         {
+            // Choose random characters (by choice) in pairs
             "a", "a", "b", "b", "<", "<", "Y", "Y",
             "!", "!", "h", "h", "%", "%", "$", "$"
         };
         // assign images to a random square
         private void AssignPicsToSquares()
         {
+            // for each squares in the table layout panel 
+            // Control them as lables
             foreach (Control control in tableLayoutPanel1.Controls)
             {
                 Label picLabel = control as Label;
+                // Set boolean to assign 
                 if (picLabel != null)
                 {
+                    // add random number to List
                     int randomNumber = randomObject.Next(Objects.Count);
+                    // Assign list to squares
                     picLabel.Text = Objects[randomNumber];
+                    // Set the colours Identically 
                     picLabel.ForeColor = picLabel.BackColor;
+                    // Remove random number after it has been used
                     Objects.RemoveAt(randomNumber);
                 }
             }
@@ -54,10 +66,13 @@ namespace MatchingGameToluA
             picMochi.Hide();
             lblIntro.Hide();
         }
-
+         
+        // add a click event on each of the little squares
         private void label_Click(object sender, EventArgs e)
         {
+            // If player Starts Game
             if (timer1.Enabled == true)
+                //Return Function
                 return;
             Label clickedLabel = sender as Label;
 
@@ -85,27 +100,32 @@ namespace MatchingGameToluA
                     secondClicked = null;
                     return;
                 }
-
-                
-
+                // Call timer function
                 timer1.Start();
             }
         }
-
+        //
         private void timer1_Tick(object sender, EventArgs e)
         {
+            // Stop Timer
             timer1.Stop();
+            //
+            if (Time > 0)
+            {
+
+            }
+
 
             firstClicked.ForeColor = firstClicked.BackColor;
             secondClicked.ForeColor = secondClicked.BackColor;
 
             firstClicked = null;
             secondClicked = null;
-
         }
 
         private void CheckWinner()
         {
+            //for each control buttons 
             foreach (Control control in tableLayoutPanel1.Controls)
             {
                 Label picLabel = control as Label;
