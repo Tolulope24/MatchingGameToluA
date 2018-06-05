@@ -17,10 +17,12 @@ namespace MatchingGameToluA
             InitializeComponent();
             // Hide Layout Panel
             tableLayoutPanel1.Hide();
+            // Hide Restart Button
+            btnRestart.Hide();
             // Call assign pics to squares function
             AssignPicsToSquares();
         }
-        // Add timer as integer
+        // Create a timer Integer
         int Time;
         // Set the first two clicked squares to nothing
         Label firstClicked = null;
@@ -65,6 +67,10 @@ namespace MatchingGameToluA
             lblInstruction.Hide();
             picMochi.Hide();
             lblIntro.Hide();
+            // set Timer
+            Time = 30;
+            lblTime.Text = "30 Seconds";
+            timer2.Start();
         }
          
         // add a click event on each of the little squares
@@ -75,13 +81,12 @@ namespace MatchingGameToluA
                 //Return Function
                 return;
             Label clickedLabel = sender as Label;
-
+            //
             if (clickedLabel != null)
             {
-
                 if (clickedLabel.ForeColor == Color.Red)
                     return;
-
+                //
                 if (firstClicked == null)
                 {
                     firstClicked = clickedLabel;
@@ -89,9 +94,10 @@ namespace MatchingGameToluA
 
                     return;
                 }
+                //
                 secondClicked = clickedLabel;
                 secondClicked.ForeColor = Color.Red;
-
+                //
                 CheckWinner();
 
                 if (firstClicked.Text == secondClicked.Text)
@@ -100,6 +106,7 @@ namespace MatchingGameToluA
                     secondClicked = null;
                     return;
                 }
+              
                 // Call timer function
                 timer1.Start();
             }
@@ -110,12 +117,6 @@ namespace MatchingGameToluA
             // Stop Timer
             timer1.Stop();
             //
-            if (Time > 0)
-            {
-
-            }
-
-
             firstClicked.ForeColor = firstClicked.BackColor;
             secondClicked.ForeColor = secondClicked.BackColor;
 
@@ -135,15 +136,31 @@ namespace MatchingGameToluA
                         return;
                 }
             }
-            MessageBox.Show("You matched all the pictures", " You are the Winner");
+            MessageBox.Show("You matched all the pictures", " You Win!");
                 Close();
         }
-    
-        private void label1_Click(object sender, EventArgs e)
+
+
+        private void timer2_Tick_1(object sender, EventArgs e)
+        {
+            if (Time > 0)
+            {
+                Time = Time - 1;
+                lblTime.Text = Time + " Seconds";
+            }
+            else
+            {
+                timer2.Stop();
+                lblTime.Text = " Time's Up!!!";
+                MessageBox.Show("You ran out of Time.", "You Loose");
+            }
+        }
+        private void frmMatchingGame_Load(object sender, EventArgs e)
         {
 
         }
-        private void frmMatchingGame_Load(object sender, EventArgs e)
+
+        private void timer2_Tick(object sender, EventArgs e)
         {
 
         }
