@@ -126,16 +126,19 @@ namespace MatchingGameToluA
 
         private void CheckWinner()
         {
-            //for each control buttons 
+            //for each control buttons in the tablelayout panel
             foreach (Control control in tableLayoutPanel1.Controls)
             {
+                //
                 Label picLabel = control as Label;
+                // if there are no more hidden lables on the form
                 if ( picLabel != null)
                 {
                     if (picLabel.ForeColor == picLabel.BackColor)
                         return;
                 }
             }
+            // show label
             MessageBox.Show("You matched all the pictures", " You Win!");
                 Close();
         }
@@ -143,15 +146,20 @@ namespace MatchingGameToluA
 
         private void timer2_Tick_1(object sender, EventArgs e)
         {
+            // if time is more than 0
             if (Time > 0)
             {
                 Time = Time - 1;
+                // Show time on the form
                 lblTime.Text = Time + " Seconds";
             }
+            // or
             else
             {
+                // Stop the timer
                 timer2.Stop();
                 lblTime.Text = " Time's Up!!!";
+                // Show message box
                 MessageBox.Show("You ran out of Time.", "You Loose");
             }
         }
