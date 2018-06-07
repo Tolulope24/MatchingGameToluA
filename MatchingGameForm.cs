@@ -141,10 +141,6 @@ namespace MatchingGameToluA
             // show label
             MessageBox.Show("You matched all the pictures", " You Win!");
                 Close();
-            // Stop Timer
-            timer2.Enabled = false; 
-            // Show Restart Buttoon 
-            btnRestart.Show();
         }
 
 
@@ -162,7 +158,7 @@ namespace MatchingGameToluA
             {
                 // Stop the timer
                 timer2.Stop();
-                // Disable TAblelayout pannel to prevent Player from continuing 
+                // Disable Tablelayout pannel to prevent Player from continuing 
                 tableLayoutPanel1.Enabled = false;
                 // Time is up
                 lblTime.Text = " Time's Up!!!";
