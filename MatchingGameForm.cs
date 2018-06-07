@@ -33,7 +33,7 @@ namespace MatchingGameToluA
         List<string> Objects = new List<string>()
         {
             // Choose random characters (by choice) in pairs
-            "a", "a", "b", "b", "<", "<", "Y", "Y",
+            "a", "a", "x", "x", "<", "<", "Y", "Y",
             "!", "!", "h", "h", "%", "%", "$", "$"
         };
         // assign images to a random square
@@ -68,8 +68,8 @@ namespace MatchingGameToluA
             picMochi.Hide();
             lblIntro.Hide();
             // set Timer
-            Time = 30;
-            lblTime.Text = "30 Seconds";
+            Time = 40;
+            lblTime.Text = "40 Seconds";
             timer2.Start();
         }
          
@@ -141,6 +141,10 @@ namespace MatchingGameToluA
             // show label
             MessageBox.Show("You matched all the pictures", " You Win!");
                 Close();
+            // Stop Timer
+            timer2.Enabled = false; 
+            // Show Restart Buttoon 
+            btnRestart.Show();
         }
 
 
@@ -158,9 +162,14 @@ namespace MatchingGameToluA
             {
                 // Stop the timer
                 timer2.Stop();
+                // Disable TAblelayout pannel to prevent Player from continuing 
+                tableLayoutPanel1.Enabled = false;
+                // Time is up
                 lblTime.Text = " Time's Up!!!";
                 // Show message box
                 MessageBox.Show("You ran out of Time.", "You Loose");
+                // Show Restart Button 
+                btnRestart.Show();
             }
         }
         private void frmMatchingGame_Load(object sender, EventArgs e)
