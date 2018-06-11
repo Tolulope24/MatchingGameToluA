@@ -54,6 +54,7 @@
             this.lblTime = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.btnRestart = new System.Windows.Forms.Button();
+            this.btnLevel2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picMochi)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -61,17 +62,18 @@
             // lblInstruction
             // 
             this.lblInstruction.AutoSize = true;
-            this.lblInstruction.Font = new System.Drawing.Font("Trajan Pro", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInstruction.Location = new System.Drawing.Point(135, 205);
+            this.lblInstruction.Font = new System.Drawing.Font("Trajan Pro", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstruction.Location = new System.Drawing.Point(5, 188);
             this.lblInstruction.Name = "lblInstruction";
-            this.lblInstruction.Size = new System.Drawing.Size(337, 30);
+            this.lblInstruction.Size = new System.Drawing.Size(579, 54);
             this.lblInstruction.TabIndex = 1;
-            this.lblInstruction.Text = "Press the start button to Play the Game\r\nYou have 30 seconds to match all the Pic" +
-    "tures";
+            this.lblInstruction.Text = "       Press the start button to Play the Game\r\nYou have 30 seconds to match all " +
+    "the Pictures";
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(252, 245);
+            this.btnStart.Font = new System.Drawing.Font("Trajan Pro", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.Location = new System.Drawing.Point(252, 256);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 0;
@@ -82,10 +84,10 @@
             // lblIntro
             // 
             this.lblIntro.AutoSize = true;
-            this.lblIntro.Font = new System.Drawing.Font("Trajan Pro", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIntro.Location = new System.Drawing.Point(158, 175);
+            this.lblIntro.Font = new System.Drawing.Font("Trajan Pro", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIntro.Location = new System.Drawing.Point(54, 134);
             this.lblIntro.Name = "lblIntro";
-            this.lblIntro.Size = new System.Drawing.Size(256, 30);
+            this.lblIntro.Size = new System.Drawing.Size(439, 54);
             this.lblIntro.TabIndex = 2;
             this.lblIntro.Text = "                Matching Game !! \r\nHow Many Can you match in time?!";
             // 
@@ -141,7 +143,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(584, 536);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(584, 530);
             this.tableLayoutPanel1.TabIndex = 8;
             this.tableLayoutPanel1.Click += new System.EventHandler(this.label_Click);
             // 
@@ -149,7 +151,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label16.Location = new System.Drawing.Point(441, 402);
+            this.label16.Location = new System.Drawing.Point(441, 396);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(137, 131);
             this.label16.TabIndex = 15;
@@ -161,7 +163,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label15.Location = new System.Drawing.Point(296, 402);
+            this.label15.Location = new System.Drawing.Point(296, 396);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(136, 131);
             this.label15.TabIndex = 14;
@@ -173,7 +175,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.Location = new System.Drawing.Point(151, 402);
+            this.label14.Location = new System.Drawing.Point(151, 396);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(136, 131);
             this.label14.TabIndex = 13;
@@ -185,7 +187,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Location = new System.Drawing.Point(6, 402);
+            this.label13.Location = new System.Drawing.Point(6, 396);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(136, 131);
             this.label13.TabIndex = 12;
@@ -197,9 +199,9 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Location = new System.Drawing.Point(441, 269);
+            this.label12.Location = new System.Drawing.Point(441, 265);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(137, 130);
+            this.label12.Size = new System.Drawing.Size(137, 128);
             this.label12.TabIndex = 11;
             this.label12.Text = "c";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -209,9 +211,9 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Location = new System.Drawing.Point(296, 269);
+            this.label11.Location = new System.Drawing.Point(296, 265);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(136, 130);
+            this.label11.Size = new System.Drawing.Size(136, 128);
             this.label11.TabIndex = 10;
             this.label11.Text = "c";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -221,9 +223,9 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Location = new System.Drawing.Point(151, 269);
+            this.label10.Location = new System.Drawing.Point(151, 265);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(136, 130);
+            this.label10.Size = new System.Drawing.Size(136, 128);
             this.label10.TabIndex = 9;
             this.label10.Text = "c";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -233,9 +235,9 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Location = new System.Drawing.Point(6, 269);
+            this.label9.Location = new System.Drawing.Point(6, 265);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(136, 130);
+            this.label9.Size = new System.Drawing.Size(136, 128);
             this.label9.TabIndex = 8;
             this.label9.Text = "c";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -245,9 +247,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Location = new System.Drawing.Point(441, 136);
+            this.label8.Location = new System.Drawing.Point(441, 134);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(137, 130);
+            this.label8.Size = new System.Drawing.Size(137, 128);
             this.label8.TabIndex = 7;
             this.label8.Text = "c";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -257,9 +259,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Location = new System.Drawing.Point(296, 136);
+            this.label7.Location = new System.Drawing.Point(296, 134);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(136, 130);
+            this.label7.Size = new System.Drawing.Size(136, 128);
             this.label7.TabIndex = 6;
             this.label7.Text = "c";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -269,9 +271,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Location = new System.Drawing.Point(151, 136);
+            this.label6.Location = new System.Drawing.Point(151, 134);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 130);
+            this.label6.Size = new System.Drawing.Size(136, 128);
             this.label6.TabIndex = 5;
             this.label6.Text = "c";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -281,9 +283,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Location = new System.Drawing.Point(6, 136);
+            this.label5.Location = new System.Drawing.Point(6, 134);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 130);
+            this.label5.Size = new System.Drawing.Size(136, 128);
             this.label5.TabIndex = 4;
             this.label5.Text = "c";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -295,7 +297,7 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Location = new System.Drawing.Point(441, 3);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(137, 130);
+            this.label4.Size = new System.Drawing.Size(137, 128);
             this.label4.TabIndex = 3;
             this.label4.Text = "c";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -307,7 +309,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Location = new System.Drawing.Point(296, 3);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 130);
+            this.label3.Size = new System.Drawing.Size(136, 128);
             this.label3.TabIndex = 2;
             this.label3.Text = "c";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -319,7 +321,7 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Location = new System.Drawing.Point(151, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 130);
+            this.label2.Size = new System.Drawing.Size(136, 128);
             this.label2.TabIndex = 1;
             this.label2.Text = "c";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -331,7 +333,7 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Location = new System.Drawing.Point(6, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 130);
+            this.label1.Size = new System.Drawing.Size(136, 128);
             this.label1.TabIndex = 0;
             this.label1.Text = "c";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -354,12 +356,23 @@
             // btnRestart
             // 
             this.btnRestart.Font = new System.Drawing.Font("Trajan Pro", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRestart.Location = new System.Drawing.Point(503, 536);
+            this.btnRestart.Location = new System.Drawing.Point(503, 535);
             this.btnRestart.Name = "btnRestart";
             this.btnRestart.Size = new System.Drawing.Size(75, 25);
             this.btnRestart.TabIndex = 10;
             this.btnRestart.Text = "Restart";
             this.btnRestart.UseVisualStyleBackColor = true;
+            this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
+            // 
+            // btnLevel2
+            // 
+            this.btnLevel2.Font = new System.Drawing.Font("Trajan Pro", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLevel2.Location = new System.Drawing.Point(422, 535);
+            this.btnLevel2.Name = "btnLevel2";
+            this.btnLevel2.Size = new System.Drawing.Size(75, 24);
+            this.btnLevel2.TabIndex = 11;
+            this.btnLevel2.Text = "Level 2";
+            this.btnLevel2.UseVisualStyleBackColor = true;
             // 
             // frmMatchingGame
             // 
@@ -367,6 +380,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aqua;
             this.ClientSize = new System.Drawing.Size(584, 561);
+            this.Controls.Add(this.btnLevel2);
             this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -413,6 +427,7 @@
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Button btnRestart;
+        private System.Windows.Forms.Button btnLevel2;
     }
 }
 

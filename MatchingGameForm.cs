@@ -15,20 +15,26 @@ namespace MatchingGameToluA
         public frmMatchingGame()
         {
             InitializeComponent();
-            // Hide Layout Panel
+            // Hide Layout Panels
             tableLayoutPanel1.Hide();
-            // Hide Restart Button
+
+            // Hide Restart Button and Level 2 button
+            btnLevel2.Hide();
             btnRestart.Hide();
+
             // Call assign pics to squares function
             AssignPicsToSquares();
         }
         // Create a timer Integer
         int Time;
+
         // Set the first two clicked squares to nothing
         Label firstClicked = null;
         Label secondClicked = null;
+
         //  Create a random obect Generator
         Random randomObject = new Random();
+
         // Create a list of random objects (using the webdings font creates the pics)
         List<string> Objects = new List<string>()
         {
@@ -44,15 +50,19 @@ namespace MatchingGameToluA
             foreach (Control control in tableLayoutPanel1.Controls)
             {
                 Label picLabel = control as Label;
+
                 // Set boolean to assign 
                 if (picLabel != null)
                 {
                     // add random number to List
                     int randomNumber = randomObject.Next(Objects.Count);
+
                     // Assign list to squares
                     picLabel.Text = Objects[randomNumber];
+
                     // Set the colours Identically 
                     picLabel.ForeColor = picLabel.BackColor;
+
                     // Remove random number after it has been used
                     Objects.RemoveAt(randomNumber);
                 }
@@ -62,14 +72,16 @@ namespace MatchingGameToluA
         {
             // Show Layout Panel 
             tableLayoutPanel1.Show();
+
             // Hide Start Button 
             btnStart.Hide();
             lblInstruction.Hide();
             picMochi.Hide();
             lblIntro.Hide();
+
             // set Timer
-            Time = 40;
-            lblTime.Text = "40 Seconds";
+            Time = 30;
+            lblTime.Text = "30 Seconds";
             timer2.Start();
         }
          
@@ -141,6 +153,7 @@ namespace MatchingGameToluA
             // show label
             MessageBox.Show("You matched all the pictures", " You Win!");
                 Close();
+            btnLevel2.Show();
         }
 
 
@@ -163,7 +176,7 @@ namespace MatchingGameToluA
                 // Time is up
                 lblTime.Text = " Time's Up!!!";
                 // Show message box
-                MessageBox.Show("You ran out of Time.", "You Loose");
+                MessageBox.Show("You ran out of Time.", "You Lose");
                 // Show Restart Button 
                 btnRestart.Show();
             }
@@ -177,5 +190,11 @@ namespace MatchingGameToluA
         {
 
         }
+
+        private void btnRestart_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
     }
 }
