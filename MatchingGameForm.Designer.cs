@@ -32,7 +32,6 @@
             this.lblInstruction = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
             this.lblIntro = new System.Windows.Forms.Label();
-            this.picMochi = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label16 = new System.Windows.Forms.Label();
@@ -55,8 +54,47 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.btnRestart = new System.Windows.Forms.Button();
             this.btnLevel2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.picMochi)).BeginInit();
+            this.picMochi = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMochi)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblInstruction
@@ -90,16 +128,6 @@
             this.lblIntro.Size = new System.Drawing.Size(439, 54);
             this.lblIntro.TabIndex = 2;
             this.lblIntro.Text = "                Matching Game !! \r\nHow Many Can you match in time?!";
-            // 
-            // picMochi
-            // 
-            this.picMochi.Image = global::MatchingGameToluA.Properties.Resources.MochiMochiPanda;
-            this.picMochi.Location = new System.Drawing.Point(313, 325);
-            this.picMochi.Name = "picMochi";
-            this.picMochi.Size = new System.Drawing.Size(259, 224);
-            this.picMochi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.picMochi.TabIndex = 3;
-            this.picMochi.TabStop = false;
             // 
             // timer1
             // 
@@ -373,6 +401,472 @@
             this.btnLevel2.TabIndex = 11;
             this.btnLevel2.Text = "Level 2";
             this.btnLevel2.UseVisualStyleBackColor = true;
+            this.btnLevel2.Click += new System.EventHandler(this.btnLevel2_Click);
+            // 
+            // picMochi
+            // 
+            this.picMochi.Image = global::MatchingGameToluA.Properties.Resources.MochiMochiPanda;
+            this.picMochi.Location = new System.Drawing.Point(313, 325);
+            this.picMochi.Name = "picMochi";
+            this.picMochi.Size = new System.Drawing.Size(259, 224);
+            this.picMochi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.picMochi.TabIndex = 3;
+            this.picMochi.TabStop = false;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
+            this.tableLayoutPanel2.ColumnCount = 6;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.Controls.Add(this.label52, 5, 5);
+            this.tableLayoutPanel2.Controls.Add(this.label51, 4, 5);
+            this.tableLayoutPanel2.Controls.Add(this.label50, 3, 5);
+            this.tableLayoutPanel2.Controls.Add(this.label49, 2, 5);
+            this.tableLayoutPanel2.Controls.Add(this.label48, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.label47, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.label46, 5, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label45, 4, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label44, 3, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label43, 2, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label42, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label41, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label40, 5, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label39, 4, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label38, 3, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label37, 2, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label36, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label35, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label34, 5, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label33, 4, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label32, 3, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label31, 2, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label30, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label29, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label28, 5, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label27, 4, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label26, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label25, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label24, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label23, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label22, 5, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label21, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label20, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label19, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label18, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label17, 0, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 6;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(584, 529);
+            this.tableLayoutPanel2.TabIndex = 12;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label17.Location = new System.Drawing.Point(6, 3);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(87, 84);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "label17";
+            this.label17.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label18.Location = new System.Drawing.Point(102, 3);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(87, 84);
+            this.label18.TabIndex = 1;
+            this.label18.Text = "label18";
+            this.label18.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label19.Location = new System.Drawing.Point(198, 3);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(87, 84);
+            this.label19.TabIndex = 2;
+            this.label19.Text = "label19";
+            this.label19.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label20.Location = new System.Drawing.Point(294, 3);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(87, 84);
+            this.label20.TabIndex = 3;
+            this.label20.Text = "label20";
+            this.label20.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label21.Location = new System.Drawing.Point(390, 3);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(87, 84);
+            this.label21.TabIndex = 4;
+            this.label21.Text = "label21";
+            this.label21.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label22.Location = new System.Drawing.Point(486, 3);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(92, 84);
+            this.label22.TabIndex = 5;
+            this.label22.Text = "label22";
+            this.label22.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label23.Location = new System.Drawing.Point(6, 90);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(87, 84);
+            this.label23.TabIndex = 6;
+            this.label23.Text = "label23";
+            this.label23.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label24.Location = new System.Drawing.Point(102, 90);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(87, 84);
+            this.label24.TabIndex = 7;
+            this.label24.Text = "label24";
+            this.label24.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label25.Location = new System.Drawing.Point(198, 90);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(87, 84);
+            this.label25.TabIndex = 8;
+            this.label25.Text = "label25";
+            this.label25.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label26.Location = new System.Drawing.Point(294, 90);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(87, 84);
+            this.label26.TabIndex = 9;
+            this.label26.Text = "label26";
+            this.label26.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label27.Location = new System.Drawing.Point(390, 90);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(87, 84);
+            this.label27.TabIndex = 10;
+            this.label27.Text = "label27";
+            this.label27.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label28.Location = new System.Drawing.Point(486, 90);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(92, 84);
+            this.label28.TabIndex = 11;
+            this.label28.Text = "label28";
+            this.label28.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label29.Location = new System.Drawing.Point(6, 177);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(87, 84);
+            this.label29.TabIndex = 12;
+            this.label29.Text = "label29";
+            this.label29.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label30.Location = new System.Drawing.Point(102, 177);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(87, 84);
+            this.label30.TabIndex = 13;
+            this.label30.Text = "label30";
+            this.label30.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label31.Location = new System.Drawing.Point(198, 177);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(87, 84);
+            this.label31.TabIndex = 14;
+            this.label31.Text = "label31";
+            this.label31.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label32.Location = new System.Drawing.Point(294, 177);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(87, 84);
+            this.label32.TabIndex = 15;
+            this.label32.Text = "label32";
+            this.label32.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label33.Location = new System.Drawing.Point(390, 177);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(87, 84);
+            this.label33.TabIndex = 16;
+            this.label33.Text = "label33";
+            this.label33.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label34.Location = new System.Drawing.Point(486, 177);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(92, 84);
+            this.label34.TabIndex = 17;
+            this.label34.Text = "label34";
+            this.label34.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label35.Location = new System.Drawing.Point(6, 264);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(87, 84);
+            this.label35.TabIndex = 18;
+            this.label35.Text = "label35";
+            this.label35.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label36.Location = new System.Drawing.Point(102, 264);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(87, 84);
+            this.label36.TabIndex = 19;
+            this.label36.Text = "label36";
+            this.label36.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label37.Location = new System.Drawing.Point(198, 264);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(87, 84);
+            this.label37.TabIndex = 20;
+            this.label37.Text = "label37";
+            this.label37.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label38.Location = new System.Drawing.Point(294, 264);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(87, 84);
+            this.label38.TabIndex = 21;
+            this.label38.Text = "label38";
+            this.label38.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label39.Location = new System.Drawing.Point(390, 264);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(87, 84);
+            this.label39.TabIndex = 22;
+            this.label39.Text = "label39";
+            this.label39.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label40.Location = new System.Drawing.Point(486, 264);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(92, 84);
+            this.label40.TabIndex = 23;
+            this.label40.Text = "label40";
+            this.label40.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label41.Location = new System.Drawing.Point(6, 351);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(87, 84);
+            this.label41.TabIndex = 24;
+            this.label41.Text = "label41";
+            this.label41.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label42.Location = new System.Drawing.Point(102, 351);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(87, 84);
+            this.label42.TabIndex = 25;
+            this.label42.Text = "label42";
+            this.label42.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label43.Location = new System.Drawing.Point(198, 351);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(87, 84);
+            this.label43.TabIndex = 26;
+            this.label43.Text = "label43";
+            this.label43.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label44.Location = new System.Drawing.Point(294, 351);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(87, 84);
+            this.label44.TabIndex = 27;
+            this.label44.Text = "label44";
+            this.label44.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label45.Location = new System.Drawing.Point(390, 351);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(87, 84);
+            this.label45.TabIndex = 28;
+            this.label45.Text = "label45";
+            this.label45.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label46.Location = new System.Drawing.Point(486, 351);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(92, 84);
+            this.label46.TabIndex = 29;
+            this.label46.Text = "label46";
+            this.label46.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label47.Location = new System.Drawing.Point(6, 438);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(87, 88);
+            this.label47.TabIndex = 30;
+            this.label47.Text = "label47";
+            this.label47.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label48.Location = new System.Drawing.Point(102, 438);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(87, 88);
+            this.label48.TabIndex = 31;
+            this.label48.Text = "label48";
+            this.label48.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label49.Location = new System.Drawing.Point(198, 438);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(87, 88);
+            this.label49.TabIndex = 32;
+            this.label49.Text = "label49";
+            this.label49.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label50.Location = new System.Drawing.Point(294, 438);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(87, 88);
+            this.label50.TabIndex = 33;
+            this.label50.Text = "label50";
+            this.label50.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label51.Location = new System.Drawing.Point(390, 438);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(87, 88);
+            this.label51.TabIndex = 34;
+            this.label51.Text = "label51";
+            this.label51.Click += new System.EventHandler(this.label_Click);
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Wingdings", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label52.Location = new System.Drawing.Point(486, 438);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(92, 88);
+            this.label52.TabIndex = 35;
+            this.label52.Text = "label52";
+            this.label52.Click += new System.EventHandler(this.label_Click);
             // 
             // frmMatchingGame
             // 
@@ -380,6 +874,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aqua;
             this.ClientSize = new System.Drawing.Size(584, 561);
+            this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.btnLevel2);
             this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.lblTime);
@@ -393,9 +888,11 @@
             this.Text = "Matching Game";
             this.Load += new System.EventHandler(this.frmMatchingGame_Load);
             this.Click += new System.EventHandler(this.label_Click);
-            ((System.ComponentModel.ISupportInitialize)(this.picMochi)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMochi)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -428,6 +925,43 @@
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Button btnRestart;
         private System.Windows.Forms.Button btnLevel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
     }
 }
 

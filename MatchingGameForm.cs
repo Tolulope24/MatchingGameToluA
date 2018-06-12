@@ -17,6 +17,7 @@ namespace MatchingGameToluA
             InitializeComponent();
             // Hide Layout Panels
             tableLayoutPanel1.Hide();
+            tableLayoutPanel2.Hide();
 
             // Hide Restart Button and Level 2 button
             btnLevel2.Hide();
@@ -42,6 +43,15 @@ namespace MatchingGameToluA
             "a", "a", "x", "x", "<", "<", "Y", "Y",
             "!", "!", "h", "h", "%", "%", "$", "$"
         };
+
+        List<string> Pics = new List<string>()
+        {
+            // Choose random characters (by choice) in pairs
+            "a", "a", "x", "x", "<", "<", "Y", "Y","v", "v", "O", "O",
+            "!", "!", "h", "h", "%", "%", "$", "$", "^","^", "@", "@",
+            "j", "j", "u", "u", "i", "i", "8", "8", "2", "2", "q", "q",
+        };
+
         // assign images to a random square
         private void AssignPicsToSquares()
         {
@@ -67,11 +77,32 @@ namespace MatchingGameToluA
                     Objects.RemoveAt(randomNumber);
                 }
             }
+            foreach (Control control in tableLayoutPanel2.Controls)
+            {
+                Label pics = control as Label;
+
+                // 
+                if (pics != null)
+                {
+                    // add random number to List
+                    int randomNumber = randomObject.Next(Pics.Count);
+
+                    // Assign list to squares
+                    pics.Text = Pics[randomNumber];
+
+                    // Set the colours Identically 
+                    pics.ForeColor = pics.BackColor;
+
+                    // Remove random number after it has been used
+                    Pics.RemoveAt(randomNumber);
+                }
+            }
         }
         private void btnStart_Click(object sender, EventArgs e)
         {
             // Show Layout Panel 
             tableLayoutPanel1.Show();
+            tableLayoutPanel2.Hide();
 
             // Hide Start Button 
             btnStart.Hide();
@@ -149,11 +180,30 @@ namespace MatchingGameToluA
                     if (picLabel.ForeColor == picLabel.BackColor)
                         return;
                 }
-            }
+            }    
+            // Stop the timer
+             timer2.Stop();
             // show label
             MessageBox.Show("You matched all the pictures", " You Win!");
-                Close();
             btnLevel2.Show();
+
+           foreach (Control control in tableLayoutPanel2.Controls)
+            {
+                //
+                Label pics = control as Label;
+                // if there are no more hidden lables on the form
+                if (pics != null)
+                {
+                    if (pics.ForeColor == pics.BackColor)
+                        return;
+                }
+
+            }
+            // Stop the timer
+            timer2.Stop();
+            // show label
+            MessageBox.Show("You matched all the pictures", " You Win!");
+            Close();
         }
 
 
@@ -169,16 +219,18 @@ namespace MatchingGameToluA
             // or
             else
             {
-                // Stop the timer
-                timer2.Stop();
                 // Disable Tablelayout pannel to prevent Player from continuing 
                 tableLayoutPanel1.Enabled = false;
+                tableLayoutPanel2.Enabled = false;
                 // Time is up
                 lblTime.Text = " Time's Up!!!";
+                // stop Timer
+                timer2.Stop();
                 // Show message box
-                MessageBox.Show("You ran out of Time.", "You Lose");
-                // Show Restart Button 
+                MessageBox.Show("You Ran Out Of Time", "Better Luck Next Time");
+                // Show hidden Buttons
                 btnRestart.Show();
+                btnLevel2.Show();
             }
         }
         private void frmMatchingGame_Load(object sender, EventArgs e)
@@ -196,5 +248,16 @@ namespace MatchingGameToluA
             Application.Restart();
         }
 
+        private void btnLevel2_Click(object sender, EventArgs e)
+        {
+            tableLayoutPanel1.Hide();
+            tableLayoutPanel2.Show();
+            btnLevel2.Hide();
+
+            // set Timer
+            Time = 60;
+            lblTime.Text = "60 Seconds";
+            timer2.Start();
+        }
     }
 }
