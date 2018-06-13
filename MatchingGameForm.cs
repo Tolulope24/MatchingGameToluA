@@ -287,8 +287,8 @@ namespace MatchingGameToluA
             tableLayoutPanel2.Show();
             timer3.Start();
             // set Timer
-            Time = 180;
-            lblTime.Text = "180 Seconds";
+            Time = 90;
+            lblTime.Text = "90 Seconds";
         }
 
         private void btnEnd_Click(object sender, EventArgs e)
