@@ -48,8 +48,8 @@ namespace MatchingGameToluA
         {
             // Choose random characters (by choice) in pairs
             "a", "a", "x", "x", "<", "<", "Y", "Y","v", "v", "O", "O",
-            "!", "!", "h", "h", "%", "%", "$", "$", "^","^", "@", "@",
-            "j", "j", "u", "u", "i", "i", "8", "8", "2", "2", "q", "q",
+            "!", "!", "h", "h", "J", "J", "z", "z", "^","^", "@", "@",
+            "[", "[", "u", "u", "i", "i", "8", "8", "2", "2", "q", "q",
         };
 
         // assign images to a random square
@@ -116,6 +116,8 @@ namespace MatchingGameToluA
             timer2.Start();
         }
          
+
+
         // add a click event on each of the little squares
         private void label_Click(object sender, EventArgs e)
         {
@@ -183,26 +185,34 @@ namespace MatchingGameToluA
             }    
             // Stop the timer
              timer2.Stop();
+
             // show label
             MessageBox.Show("You matched all the pictures", " You Win!");
+
+            // Show level 2 button
             btnLevel2.Show();
 
-           foreach (Control control in tableLayoutPanel2.Controls)
+            //for each control buttons in the tablelayout panel
+            foreach (Control control in tableLayoutPanel2.Controls)
             {
                 //
                 Label pics = control as Label;
+
                 // if there are no more hidden lables on the form
                 if (pics != null)
                 {
                     if (pics.ForeColor == pics.BackColor)
                         return;
                 }
-
             }
+
             // Stop the timer
-            timer2.Stop();
+            timer3.Stop();
+
             // show label
             MessageBox.Show("You matched all the pictures", " You Win!");
+
+            // close app
             Close();
         }
 
@@ -221,7 +231,6 @@ namespace MatchingGameToluA
             {
                 // Disable Tablelayout pannel to prevent Player from continuing 
                 tableLayoutPanel1.Enabled = false;
-                tableLayoutPanel2.Enabled = false;
                 // Time is up
                 lblTime.Text = " Time's Up!!!";
                 // stop Timer
@@ -233,23 +242,10 @@ namespace MatchingGameToluA
                 btnLevel2.Show();
             }
         }
-        private void frmMatchingGame_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnRestart_Click(object sender, EventArgs e)
-        {
-            Application.Restart();
-        }
 
         private void btnLevel2_Click(object sender, EventArgs e)
         {
+            timer2.Enabled = false;
             tableLayoutPanel1.Hide();
             tableLayoutPanel2.Show();
             btnLevel2.Hide();
@@ -257,7 +253,48 @@ namespace MatchingGameToluA
             // set Timer
             Time = 60;
             lblTime.Text = "60 Seconds";
-            timer2.Start();
+            timer3.Start();
         }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            // if time is more than 0
+            if (Time > 0)
+            {
+                Time = Time - 1;
+                // Show time on the form
+                lblTime.Text = Time + " Seconds";
+            }
+            // or
+            else
+            {
+                // Disable Tablelayout pannel to prevent Player from continuing 
+                tableLayoutPanel2.Enabled = false;
+                // Time is up
+                lblTime.Text = " Time's Up!!!";
+                // stop Timer
+                timer3.Stop();
+                // Show message box
+                MessageBox.Show("You Ran Out Of Time", "Better Luck Next Time");
+                Close();
+                // Show hidden Buttons
+                btnRestart.Show();
+                btnLevel2.Hide();
+            }
+        }
+        private void btnRestart_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+
+        }
+        private void frmMatchingGame_Load(object sender, EventArgs e)
+        {
+
+        }
+       
     }
 }
