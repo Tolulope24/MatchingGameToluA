@@ -285,10 +285,11 @@ namespace MatchingGameToluA
         {
             btnRestart.Show();
             tableLayoutPanel2.Show();
-            timer3.Start();
+            
             // set Timer
             Time = 90;
             lblTime.Text = "90 Seconds";
+            timer3.Start();
         }
 
         private void btnEnd_Click(object sender, EventArgs e)
@@ -300,6 +301,9 @@ namespace MatchingGameToluA
             // Hide Start Button 
             btnStart.Hide();
 
+            // Hide end button 
+            btnEnd.Hide();
+
             // Hide Labels
             lblInstruction.Hide();
             lblIntro.Hide();
@@ -310,6 +314,12 @@ namespace MatchingGameToluA
             // show end
             lblCongrats.Show();
             picMochiPanda.Show();
+
+            // hide time label
+            lblTime.Hide();
+
+            // show restart button
+            btnRestart.Show();
         }
         private void btnRestart_Click(object sender, EventArgs e)
         {
