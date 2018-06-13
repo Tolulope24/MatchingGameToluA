@@ -85,5 +85,8 @@
   <ItemGroup>
     <None Include="Resources\MochiMochiPanda.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MochiMochi.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

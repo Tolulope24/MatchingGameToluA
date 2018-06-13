@@ -19,9 +19,14 @@ namespace MatchingGameToluA
             tableLayoutPanel1.Hide();
             tableLayoutPanel2.Hide();
 
-            // Hide Restart Button and Level 2 button
+            // Hide Restart Button, end button and Level 2 button
             btnLevel2.Hide();
             btnRestart.Hide();
+            btnEnd.Hide();
+
+            // Hide Labels and picture boxes
+            picMochiPanda.Hide();
+            lblCongrats.Hide();
 
             // Call assign pics to squares function
             AssignPicsToSquares();
@@ -98,6 +103,7 @@ namespace MatchingGameToluA
                 }
             }
         }
+
         private void btnStart_Click(object sender, EventArgs e)
         {
             // Show Layout Panel 
@@ -156,6 +162,7 @@ namespace MatchingGameToluA
                 timer1.Start();
             }
         }
+
         //
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -182,38 +189,40 @@ namespace MatchingGameToluA
                     if (picLabel.ForeColor == picLabel.BackColor)
                         return;
                 }
-            }    
-            // Stop the timer
-             timer2.Stop();
 
-            // show label
-            MessageBox.Show("You matched all the pictures", " You Win!");
+            }
+            // Stop the timer
+            timer2.Stop();
 
             // Show level 2 button
             btnLevel2.Show();
+
+            /*show message box
+             MessageBox.Show("You matched all the pictures", " You Win!");*/
 
             //for each control buttons in the tablelayout panel
             foreach (Control control in tableLayoutPanel2.Controls)
             {
                 //
-                Label pics = control as Label;
-
+                Label picLabel = control as Label;
                 // if there are no more hidden lables on the form
-                if (pics != null)
+                if (picLabel != null)
                 {
-                    if (pics.ForeColor == pics.BackColor)
+                    if (picLabel.ForeColor == picLabel.BackColor)
                         return;
                 }
-            }
 
-            // Stop the timer
+            }
+            // Stop Timer
             timer3.Stop();
 
-            // show label
-            MessageBox.Show("You matched all the pictures", " You Win!");
+            // Show congratulatory Message box
+            MessageBox.Show("Congratulations You Have Completed the Game");
+            btnLevel2.Hide();
+            btnRestart.Hide();
+            btnEnd.Show();
 
-            // close app
-            Close();
+
         }
 
 
@@ -243,18 +252,7 @@ namespace MatchingGameToluA
             }
         }
 
-        private void btnLevel2_Click(object sender, EventArgs e)
-        {
-            timer2.Enabled = false;
-            tableLayoutPanel1.Hide();
-            tableLayoutPanel2.Show();
-            btnLevel2.Hide();
 
-            // set Timer
-            Time = 60;
-            lblTime.Text = "60 Seconds";
-            timer3.Start();
-        }
 
         private void timer3_Tick(object sender, EventArgs e)
         {
@@ -276,11 +274,42 @@ namespace MatchingGameToluA
                 timer3.Stop();
                 // Show message box
                 MessageBox.Show("You Ran Out Of Time", "Better Luck Next Time");
-                Close();
                 // Show hidden Buttons
                 btnRestart.Show();
+                //hide level 2 button
                 btnLevel2.Hide();
             }
+        }
+
+        private void btnLevel2_Click(object sender, EventArgs e)
+        {
+            btnRestart.Show();
+            tableLayoutPanel2.Show();
+            timer3.Start();
+            // set Timer
+            Time = 180;
+            lblTime.Text = "180 Seconds";
+        }
+
+        private void btnEnd_Click(object sender, EventArgs e)
+        {
+            // Hide Layout Panel 
+            tableLayoutPanel1.Hide();
+            tableLayoutPanel2.Hide();
+
+            // Hide Start Button 
+            btnStart.Hide();
+
+            // Hide Labels
+            lblInstruction.Hide();
+            lblIntro.Hide();
+
+            // Hide Intro Pic
+            picMochi.Hide();
+
+            // show end
+            lblCongrats.Show();
+            picMochiPanda.Show();
         }
         private void btnRestart_Click(object sender, EventArgs e)
         {
@@ -295,6 +324,7 @@ namespace MatchingGameToluA
         {
 
         }
-       
+
+
     }
 }
