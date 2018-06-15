@@ -320,6 +320,11 @@ namespace MatchingGameToluA
 
             // show restart button
             btnRestart.Show();
+
+            // Hide the end button
+            btnEnd.Hide();
+
+          
         }
         private void btnRestart_Click(object sender, EventArgs e)
         {
