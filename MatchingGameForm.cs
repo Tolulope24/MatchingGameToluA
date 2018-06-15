@@ -135,9 +135,12 @@ namespace MatchingGameToluA
             //
             if (clickedLabel != null)
             {
+                // if the clicked square has a red colour
+                // return
                 if (clickedLabel.ForeColor == Color.Red)
                     return;
-                //
+
+                // 
                 if (firstClicked == null)
                 {
                     firstClicked = clickedLabel;
@@ -145,7 +148,7 @@ namespace MatchingGameToluA
 
                     return;
                 }
-                //
+                // the 
                 secondClicked = clickedLabel;
                 secondClicked.ForeColor = Color.Red;
                 //
@@ -163,7 +166,7 @@ namespace MatchingGameToluA
             }
         }
 
-        //
+        // First timer functions
         private void timer1_Tick(object sender, EventArgs e)
         {
             // Stop Timer
