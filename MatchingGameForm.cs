@@ -248,7 +248,6 @@ namespace MatchingGameToluA
                 MessageBox.Show("You Ran Out Of Time", "Better Luck Next Time");
                 // Show hidden Buttons
                 btnRestart.Show();
-                btnLevel2.Show();
             }
         }
 
